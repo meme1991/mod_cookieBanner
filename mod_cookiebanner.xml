@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+  <name>MOD_COOKIEBANNER</name>
+	<author>SPEDI srl</author>
+	<creationDate>Gennaio 2017</creationDate>
+	<copyright>Copyright (C) SPEDI srl</copyright>
+	<license>GNU General Public License version 2 or later;</license>
+	<authorEmail>sviluppo@spedi.it</authorEmail>
+	<authorUrl>http://www.spedi.it</authorUrl>
+	<version>3.0.0</version>
+	<description>MOD_COOKIEBANNER_DESC</description>
+
+    <files>
+        <filename>mod_cookiebanner.xml</filename>
+        <filename module="mod_cookiebanner">mod_cookiebanner.php</filename>
+        <filename>index.html</filename>
+        <folder>css</folder>
+        <folder>js</folder>
+        <folder>language</folder>
+    </files>
+    <config>
+      <fields name="params">
+
+        <fieldset name="basic" addfieldpath="/administrator/components/com_menus/models/fields">
+
+          <field
+            name="jquery"
+            type="radio"
+            label="MOD_COOKIEBANNER_JQUERY_LOAD"
+            description="MOD_COOKIEBANNER_JQUERY_LOAD_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+            >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+          </field>
+
+          <field
+            name="message"
+            type="textarea"
+            default="Questo sito usa i cookie per offrirti la migliore esperienza possibile."
+            label="MOD_COOKIEBANNER_MESSAGE"
+            description="MOD_COOKIEBANNER_MESSAGE_DESC"
+            rows="10"
+            cols="5"
+          />
+
+          <field
+            name="btnDecline"
+            type="radio"
+            label="MOD_COOKIEBANNER_BTN_DECLINE"
+            description="MOD_COOKIEBANNER_BTN_DECLINE_DESC"
+            class="btn-group btn-group-yesno"
+            default="true"
+            >
+            <option value="true">JYES</option>
+            <option value="false">JNO</option>
+          </field>
+
+          <field
+            name="expireDays"
+            type="number"
+            default="365"
+            label="MOD_COOKIEBANNER_EXPIREDAYS"
+            description="MOD_COOKIEBANNER_EXPIREDAYS_DESC"
+          />
+
+          <field
+  					name="btnPrivacy-link"
+  					type="modal_menu"
+  					label="MOD_COOKIEBANNER_PRIVACYLINK"
+  					description="MOD_COOKIEBANNER_PRIVACYLINK_DESC"
+  					select="true"
+  					new="true"
+  					clear="true"
+  				/>
+
+        </fieldset>
+
+        <fieldset name="style" label="MOD_COOKIEBANNER_STYLE">
+
+          <field
+            name="primary"
+            type="color"
+            default="#eeeeee"
+            label="MOD_COOKIEBANNER_PRIMARY"
+            description="MOD_COOKIEBANNER_PRIMARY_DESC"
+          />
+
+          <field
+            name="secondary"
+            type="color"
+            default="#1C2024"
+            label="MOD_COOKIEBANNER_SECONDARY"
+            description="MOD_COOKIEBANNER_SECONDARY_DESC"
+          />
+
+          <field
+            name="position"
+            type="list"
+            label="MOD_COOKIEBANNER_POSITION"
+            description="MOD_COOKIEBANNER_POSITION_DESC"
+            class="btn-group"
+            default="1"
+            >
+            <option value="0">MOD_COOKIEBANNER_POSITION_TOP</option>
+            <option value="1">MOD_COOKIEBANNER_POSITION_BOTTOM</option>
+            <option value="2">MOD_COOKIEBANNER_POSITION_POPUP</option>
+          </field>
+
+          <field
+            name="fixed"
+            type="radio"
+            label="MOD_COOKIEBANNER_POSITION_FIXED"
+            description="MOD_COOKIEBANNER_POSITION_FIXED_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+            >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+          </field>
+
+          <field
+            name="button-inline"
+            type="radio"
+            label="MOD_COOKIEBANNER_BUTTON_INLINE"
+            description="MOD_COOKIEBANNER_BUTTON_INLINE_DESC"
+            class="btn-group btn-group-yesno"
+            default="0"
+            >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+          </field>
+
+        </fieldset>
+
+      </fields>
+    </config>
+</extension>
