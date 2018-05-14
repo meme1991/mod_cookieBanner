@@ -7,7 +7,20 @@
 // @Copyright: Copyright (c) SPEDI srl
 
 #cookie-bar{
-  padding: 10px 50px;
+  padding: 30px 350px;
+  @media (max-width: 1400px){
+    padding: 30px 250px;
+  }
+  @media (max-width: 1200px){
+    padding: 30px 200px;
+  }
+  @media (max-width: 992px){
+    padding: 10px 100px;
+  }
+  @media (max-width: 568px){
+    padding: 10px 50px;
+  }
+
 
   &.fixed{
     position:fixed;
