@@ -48,7 +48,7 @@
     else var m = "";
     if (b.declineButton) var n = '<a href="" class="btn cb-disable">' + b.declineText + "</a>";
     else var n = "";
-    if (b.policyButton) var o = '<span>Per maggiori informazioni leggi la nostra <a href="' + b.policyURL + '" class="cb-policy">' + b.policyText + "</a></span>";
+    if (b.policyButton) var o = '<br><span>Per maggiori informazioni leggi la nostra <a href="' + b.policyURL + '" class="cb-policy">' + b.policyText + "</a></span>";
     else var o = "";
     if (b.fixed)
       if (1 == b.bottom) var p = ' class="fixed bottom"';
