@@ -16,8 +16,8 @@ $primary          = $params->get('primary');
 $secondary        = $params->get('secondary');
 $btnDecline       = ($params->get('btnDecline')) ? 'true' : 'false';
 $expire_days      = $params->get('expireDays');
-$privacy_link     = JFactory::getApplication()->getMenu()->getItem($params->get('btnPrivacy-link'));
-$privacy_link     = JRoute::_($privacy_link->link);
+$cookie_policy_link = JFactory::getApplication()->getMenu()->getItem($params->get('btnPrivacy-link'));
+$cookie_policy_link = JRoute::_($cookie_policy_link->link);
 
 /* position */
 $position     = $params->get('position');
@@ -53,7 +53,7 @@ $script = "
       declineText: '".JText::_("MOD_COOKIEBANNER_DECLINE")."',
       policyButton: true,
       policyText: '".JText::_("MOD_COOKIEBANNER_PRIVACY_LINK")."',
-      policyURL: '".$privacy_link."',
+      policyURL: '".$cookie_policy_link."',
       autoEnable: true,
       acceptOnContinue: false,
       acceptOnScroll: false,
