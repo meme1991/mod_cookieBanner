@@ -82,7 +82,7 @@
           <field
             name="primary"
             type="color"
-            default="#eeeeee"
+            default="#1C2024"
             label="MOD_COOKIEBANNER_PRIMARY"
             description="MOD_COOKIEBANNER_PRIMARY_DESC"
           />
@@ -90,7 +90,7 @@
           <field
             name="secondary"
             type="color"
-            default="#1C2024"
+            default="#eeeeee"
             label="MOD_COOKIEBANNER_SECONDARY"
             description="MOD_COOKIEBANNER_SECONDARY_DESC"
           />
