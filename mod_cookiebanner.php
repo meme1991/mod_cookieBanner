@@ -3,7 +3,7 @@
 # @Date:   03-01-2018
 # @Email:  sviluppo@spedi.it
 # @Last modified by:   SPEDI srl
-# @Last modified time: 22-05-2018
+# @Last modified time: 02-10-2018
 # @License: GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
 # @Copyright: Copyright (C) SPEDI srl
 
@@ -23,6 +23,10 @@ $cookie_policy_link = JRoute::_($cookie_policy_link->link);
 $position     = $params->get('position');
 $fixed        = ($params->get('fixed')) ? 'true' : 'false';
 $buttonInline = $params->get('button-inline');
+
+/* */
+$message = str_replace("{{break}}", "<br>", $message);
+$message = str_replace("{{link}}", "", $message);
 
 $document = JFactory::getDocument();
 if($jquery)
